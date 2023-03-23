@@ -5,15 +5,17 @@ import { SectionHero } from "../../components/sectionHero/index";
 import { api } from "../../services/api";
 
 
-
 export const Home = () => {
 
   const [data,setData] = useState([])
 
   useEffect(() => {
+   /*  api.get().then((data) => {
+      console.log(data)
+    }) */
     api.get('/v1/public/comics').then((response) => {
       setData(response.data.data.results)
-      console.log(response.data.data.results)
+     // console.log(response.data.data.results)
     })
   }, [])
 

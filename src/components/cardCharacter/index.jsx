@@ -11,6 +11,7 @@ export function ListCharacters({ data }) {
 
     
     const [openModal, setOpenModal] = useState(false)
+    const [caracter, setCaracter] = useState()
   
 
     const arrayPrice = ["230.90", "312.20", "420.20", "305.00", "100.20", "32.90", "320.20", "209.00", "32.20", "500.20", "200.31", "214.50", "120.00", "450.00", "120.21", "234.00", "501.10", "210.19", "700.20"]
@@ -29,8 +30,9 @@ export function ListCharacters({ data }) {
                             data.map((character,index) => {
                                 return (
                                 <StyleCard key={index}>
-                                    
-                                        <div className="image" onClick={() => setOpenModal(true)}>
+                                        <div className="image" onClick={() => {
+                                            setOpenModal(true)
+                                            setCaracter(character)}}>
                                             <img src={character.thumbnail.path+'.'+character.thumbnail.extension} width={280} height={372} alt="Imagem do personagem" />
                                         </div>
                                         <div className="info">
@@ -51,7 +53,7 @@ export function ListCharacters({ data }) {
                     </div>
                 </StyleListCharacters>
                 
-                <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
+                <Modal isOpen={openModal} data={caracter} setModalOpen={() => setOpenModal(!openModal)}>
                     Conteúdo do modal
                 </Modal>
             </Container>
