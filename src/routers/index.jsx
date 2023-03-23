@@ -1,16 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import { Home } from '../pages/Home';
-
-
-
-
+import { Home } from '../pages/Home/index';
 
 export const AppRouter = () => {
 
   return (
 
     <Routes>
-      <Route exact path="/" element={ <Home /> } />
+      <Route  path="/" element={ <Home /> } />
     </Routes>
   )
   

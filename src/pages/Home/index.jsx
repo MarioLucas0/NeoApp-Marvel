@@ -1,6 +1,8 @@
+import { SectionHero } from "../../components/sectionHero/index";
 
-export const Home = () =>{
+
+export const Home = () => {
   return (
-    <h1>Home</h1>
+     <SectionHero/>
   );
 }
