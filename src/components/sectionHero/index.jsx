@@ -38,8 +38,8 @@ export const SectionHero = () =>{
             <ContextText>
                  <div className="left">
                     <h3>COMING SON</h3>
-                    <h1>Marvel's WHAT IF… ?</h1>
-                    <p>Disponível no Disney+, What If… ? é uma série de animação que leva o público para um terreno desconhecido ao contar, de forma alternativa, momentos cruciais do Universo Cinematográfico Marvel, imaginando o que teria acontecido aos super-heróis se a história fosse totalmente diferente e se passasse em outra realidade.</p>
+                    <h1>Marvel Comics - A maior coleção de heróis e vilões em quadrinhos!</h1>
+                    <p>Bem-vindo à loja oficial da Marvel Comics! Aqui, você encontrará a maior coleção de quadrinhos dos seus heróis e vilões favoritos. De clássicos como Homem-Aranha e X-Men até as últimas novidades da Marvel, temos tudo o que você precisa para mergulhar no universo dos super-heróis. Descubra histórias épicas de ação, aventura e intriga, apresentadas em uma ampla variedade de formatos, desde edições individuais até coleções completas. Não importa se você é um fã de longa data ou está apenas começando sua jornada na Marvel Comics, nossa loja tem tudo para saciar sua sede de aventura. Explore nossa coleção agora e descubra o que torna a Marvel Comics tão especial!</p>
                     <a href="#" target="_blank" rel="noreferrer">
                       
                     </a>

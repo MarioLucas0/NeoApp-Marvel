@@ -7,11 +7,11 @@ export const SectionHeroStyle = styled.section`
     position: relative;
     z-index: 1;
     width: 100%;
-    height: 731px;
+    height: 73.1rem;
     background: url(${bgHero}) no-repeat top center;
     background-attachment: fixed;
     background-size: fill;
-    padding-top: 96px;
+    padding-top: 9.6rem;
     display: flex;
 
     ${Container} {
@@ -25,28 +25,28 @@ export const SectionHeroStyle = styled.section`
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 300px;
+        height: 30rem;
         background-image: linear-gradient(transparent, #000000);
         z-index: -1;
     }
 `;
 
 export const AreaSocial = styled.div`
-    width: 72px;
+    width: 7.2rem;
     height: 100%;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
 
     ul {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 30px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 3rem 0;
+        border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
 
         li {
             &:not(:last-child) {
-                margin-bottom: 32px;
+                margin-bottom: 3.2rem;
             }
 
             a {
@@ -58,53 +58,51 @@ export const AreaSocial = styled.div`
 
 export const ContextText = styled.div`
     height: 100%;
-    padding-left: 96px;
-    padding-right: 71px;
+    padding-left: 9.6rem;
+    padding-right: 7.1rem;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     flex: 1;
-    padding-bottom: 31px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 3.1rem;
+    border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
 
     .left {
         flex: 1;
-        max-width: 574px;
-        padding-bottom: 10.1rem;
+        padding-bottom: 2.1rem;
 
         h3 {
             font-weight: 700;
-            font-size: 14px;
-            line-height: 21px;
-            letter-spacing: 0.095em;
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+            letter-spacing: 0.0095em;
             color: #FFA800;
-            margin-bottom: 8px;
+            margin-bottom: 0.8rem;
         }
 
         h1 {
             font-weight: 600;
-            font-size: 61px;
-            line-height: 71px;
-            margin-bottom: 24px;
-            max-width: 400px;
+            font-size: 5.1rem;
+            line-height: 7.1rem;
+            margin-bottom: 2.4rem;
         }
 
         p {
             font-weight: 400;
             font-size: 1.6rem;
-            line-height: 24px;
-            color: $gray200;
-            max-width: 490px;
-            margin-bottom: 32px;
+            line-height: 2.4rem;
+            color: gray;
+            max-width: 49rem;
+           
         }
 
         a {
             display: inline-block;
             padding: 1.5rem 5.2rem;
             background-color: $red900;
-            border-radius: 5px;
+            border-radius: 0.5rem;
             font-weight: 600;
-            line-height: 24px;
+            line-height: 2.4rem;
             font-size: 1.6rem;
             color: $white;
             transition: all 0.3s ease;
