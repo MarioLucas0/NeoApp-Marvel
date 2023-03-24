@@ -1,5 +1,5 @@
+import 'animate.css';
 import styled from 'styled-components';
-
 export const Container = styled.div` 
 position: fixed; 
   top: 0;
@@ -18,6 +18,8 @@ height: 70%;
 background: linear-gradient(119.36deg, #010101 0%, #000000 100%);
 border-radius: 10px; color: black;
 border: 0.1rem solid rgba(255, 255, 255, 0.2);;
+animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+animation-duration: 1s;
 `
 export const CloseButton = styled.button` 
 cursor: pointer;
@@ -47,7 +49,7 @@ export const DivImg = styled.div`
   img {
   width: 100%;
   height: 100% ;
-  object-fit: cover;
+  object-fit: fill;
   }
 
 `

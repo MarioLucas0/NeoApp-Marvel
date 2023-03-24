@@ -15,7 +15,7 @@ export const Home = () => {
     }) */
     api.get('/v1/public/comics').then((response) => {
       setData(response.data.data.results)
-     // console.log(response.data.data.results)
+     console.log(response.data)
     })
   }, [])
 

@@ -1,8 +1,6 @@
 import React from 'react';
 import { CloseButton, Container, Content, DivImg, DivText, ModalContainer } from "./styles";
 const Modal = ({isOpen, setModalOpen, data }) => {
-
-  console.log(data)
     if (isOpen) {
     return (
         <Container>

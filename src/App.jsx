@@ -7,13 +7,13 @@ import { GlobalStyle } from './styles/global';
 
 function App() {
   return (
-   <ContextProvider>
+  <ContextProvider>
     <Router>
       <GlobalStyle />
       <Header />
       <AppRouter />
-    </Router>  
-  </ContextProvider>
+    </Router> 
+  </ContextProvider> 
   );
 }
 

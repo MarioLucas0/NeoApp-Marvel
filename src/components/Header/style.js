@@ -34,6 +34,34 @@ z-index: 2023;
             width: 104;
             height: 1;
         }
-    } 
+    }   
 
+`
+export const QuantidadeItems  = styled.div`
+
+        width: 2rem;
+            height: 2rem;
+            background-color: red;
+            border-radius: 50%;
+            top: -0.8rem;
+            position: absolute;
+            right: 1rem;
+            text-align: center;
+            display: ${props => props.item ? "block" :  "none" };
+            span {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: white;
+        }
+`
+export const DivCarrinho   = styled.div`
+
+    background: none;
+        margin-right: 1rem;
+        width: 5rem;
+        position: relative;
+        
+        img {
+        width: 3rem;
+    }
 `
