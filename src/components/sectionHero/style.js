@@ -93,7 +93,6 @@ export const ContextText = styled.div`
             line-height: 2.4rem;
             color: gray;
             max-width: 49rem;
-           
         }
 
         a {
@@ -111,5 +110,63 @@ export const ContextText = styled.div`
                 filter: brightness(0.8);
             }
         }
+    }
+    @media screen and (max-width: 825px) {
+        padding: 0;
+        overflow: hidden;
+        padding: 1rem;
+        .left {
+        height: 100%;
+        padding-bottom: 0;
+
+        h3 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 2.1rem;
+            letter-spacing: 0.0095em;
+            color: #FFA800;
+            margin-bottom: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 3.5rem;
+            line-height: 3rem;
+        }
+        p {
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            color: gray;
+            max-width: 49rem;
+           
+        }
+    }
+    }
+    @media screen and (max-width: 570px) {
+        padding: 0;
+        overflow: hidden;
+        padding: 1rem;
+        .left {
+        height: 100%;
+        padding-bottom: 0;
+
+        h3 {
+            font-weight: 700;
+            font-size: 0.8rem;
+            line-height: 2.1rem;
+            letter-spacing: 0.0095em;
+            color: #FFA800;
+            margin-bottom: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 3rem;
+        }
+    }
     }
 `;

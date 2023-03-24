@@ -14,6 +14,7 @@ position: fixed;
 top: 50%; left: 50%; 
 transform: translate(-50%, -50%); 
 width: 80%;
+max-width: 126rem;
 height: 70%;
 background: linear-gradient(119.36deg, #010101 0%, #000000 100%);
 border-radius: 10px; color: black;

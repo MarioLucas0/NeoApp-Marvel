@@ -1,9 +1,11 @@
 import 'animate.css';
 import styled from 'styled-components';
+import { Container } from '../../styles/global';
 
 export const StyleListCharacter = styled.div`
     padding-top: 5.6rem;
     padding-bottom: 5.2rem;
+    
     .title {
         width: 100%;
         display: flex;
@@ -39,6 +41,32 @@ export const StyleListCharacter = styled.div`
             }
         }
     }
+  
+    
+    ${Container} {
+        @media(max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+        @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .title {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            margin-top: 5rem;
+        }
+        }
+    }
+    
+  
 `;
 
 export const StyleListCharacters = styled.div`
@@ -52,6 +80,17 @@ export const StyleListCharacters = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    @media(max-width: 1200px) {
+        grid-gap: 4.4rem 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media(max-width: 850px) {
+        grid-gap: 4.4rem 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width: 570px) {
+        grid-template-columns: repeat(1, 1fr);
     }
 `;
 

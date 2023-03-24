@@ -13,12 +13,14 @@ export const GlobalStyle  = createGlobalStyle`
 
   html {
     font-size: 62.5%;
+    overflow-x: hidden;
   }
 
   body {
     -webkit-font-smoothing: antialiased;
     background: linear-gradient(119.36deg, #010101 0%, #000000 100%);
     color: #fff;
+    overflow-x: hidden;
   }
 
   img {
@@ -35,4 +37,5 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1216px;
   margin: 0 auto;
+
 `;

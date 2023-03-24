@@ -15,7 +15,8 @@ export const Section = styled.section`
 `
 export const Main = styled.main`
   
-  width: 90%; 
+  width: 90%;
+  max-width: 126rem; 
   max-height: 82rem;
   background: linear-gradient(119.36deg, #010101 0%, #000000 100%);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
