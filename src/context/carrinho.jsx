@@ -4,7 +4,7 @@ export const context = createContext({});
 export const  ContextProvider = ({ children }) => {
   const [comicsCart, setComicsCart] = useState([]);
 
-  function handleAddItemToCart(comic, price) {
+  function handleAddItemToCart(comic, price,raridade) {
     const itemObject = [...comicsCart];
     const item = itemObject.find((comics) => comics.id === comic.id );
     console.log(comic)
@@ -16,7 +16,8 @@ export const  ContextProvider = ({ children }) => {
         price: price,
         description: comic.description,
         img: comic.thumbnail.path+'.'+comic.thumbnail.extension,
-        quantidade: 1
+        quantidade: 1,
+        raridade: raridade
       });
     } 
     setComicsCart(itemObject);

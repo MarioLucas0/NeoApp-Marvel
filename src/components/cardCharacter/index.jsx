@@ -1,24 +1,26 @@
 
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 import Carrinho from '../../assets/carrinho-de-compras.svg';
 import LogoMarvel from '../../assets/logo.svg';
 import Pesquisa from '../../assets/Pesquisa.svg';
 import { context } from '../../context/carrinho';
 import { Container } from "../../styles/global";
-import Modal from '../modalDetails';
 import { ModalTotast } from '../modalNotification';
-import { BtnLoadMore, ButtonLimpar, DivInput, DivInputs, StyleCard, StyleListCharacter, StyleListCharacters } from "./styles";
+import { BtnLoadMore, ButtonLimpar, DivInput, DivInputs, Rarity, StyleCard, StyleListCharacter, StyleListCharacters } from "./styles";
 
 export function ListCharacters({ data }) {
 
     const {handleAddItemToCart,comicsCart} = useContext(context)
-    const [openModal, setOpenModal] = useState(false)
     const [comic, setComic] = useState()
     const [busca, setBusca] = useState("");
     const [limit, setLimit] = useState(10);
+    const [rarity,setRarity] = useState("")
 
     
-    const arrayPrice = ["230.90", "312.20", "420.20", "305.00", "100.20", "32.90", "320.20", "209.00", "32.20", "500.20", "200.31", "214.50", "120.00", "450.00", "120.21", "234.00", "501.10", "210.19", "700.20"]
+
+    
+    const arrayPrice = [230, 312, 420, 305, 100, 32, 320, 209, 32, 500, 200, 214, 120, 450, 120, 234, 501, 210, 700.20]
 
     const limpar = () => {
         if(busca !== "") {
@@ -30,16 +32,32 @@ export function ListCharacters({ data }) {
     const [showModal, setShowModal] = useState(false);
         const handleClick = () => {
             setShowModal(true);
-        };
+    };
 
-
+    
+    function generateRarity() {
+        const rarityIndices = [];
+        while (rarityIndices.length < 3) {
+          const randomIndex = Math.floor(Math.random() * 20);
+          if (!rarityIndices.includes(randomIndex)) {
+            rarityIndices.push(randomIndex);
+          }
+        }
+        const rarities = Array(20).fill("comum");
+        rarityIndices.forEach((index) => {
+          rarities[index] = "raro";
+        });
+        return rarities;
+      }
+    useEffect(() => {
+        setRarity(generateRarity())
+    },[])
+      
+      
     
 
     const comicsToShow = data.slice(0, limit).filter((comic) => comic.title.toUpperCase().includes(busca.toUpperCase()));
 
-   /* const comicsFiltrados = data?.filter((comic) => comic.title.toUpperCase().includes(busca.toUpperCase()))    */
-
- /*   const comicsFiltrados = data?.; */
 
     return (
         <StyleListCharacter>
@@ -60,7 +78,6 @@ export function ListCharacters({ data }) {
                                 return (
                                 <StyleCard key={index}>
                                         <div className="image" onClick={() => {
-                                            setOpenModal(true)
                                             setComic(character)
                                             console.log(character)
                                             }}>
@@ -71,8 +88,11 @@ export function ListCharacters({ data }) {
                                             <div>
                                                 <h3>{character.title.substring(0,20) + '...'}</h3>
                                                 <span>R$ {arrayPrice[index]}</span>
+                                                <Rarity rarity={rarity[index]}>{rarity[index] === "raro" ? "Raro" : "Comum"}</Rarity>
+                                                <Link to={`/detalhes/comic/${character.id}`}  >Ver Mais..</Link>
+                                                
                                             </div>
-                                            <button onClick={() => handleAddItemToCart(character,arrayPrice[index])}>
+                                            <button onClick={() => handleAddItemToCart(character,arrayPrice[index],rarity[index])}>
                                                 <img className="carrinho" src={Carrinho} alt="" onClick={handleClick}/>  
                                                 
                                             </button>
@@ -91,9 +111,7 @@ export function ListCharacters({ data }) {
                     </div>
             </StyleListCharacters>
                 
-                <Modal isOpen={openModal} data={comic} setModalOpen={() => setOpenModal(!openModal)}>
-                    Conteúdo do modal
-                </Modal>
+           
             </Container>
         </StyleListCharacter>
     )

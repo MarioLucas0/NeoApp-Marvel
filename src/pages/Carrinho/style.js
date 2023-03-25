@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 import bgHero from '../../assets/bg-hero.jpg';
+
+export const CupomInput = styled.input`
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 16px;
+`;
+
 export const Section = styled.section`
   width: 100%;
   height: 100vh;

@@ -30,15 +30,6 @@ export const StyleListCharacter = styled.div`
             max-width: 30.6rem;
             position: relative;
             padding-left: 1.6rem;
-            &:before {
-                content: "";
-                background-color: $red800;
-                width: 0.2rem;
-                height: 5.9rem;
-                position: absolute;
-                top: 0.55rem;
-                left: 0;
-            }
         }
     }
   
@@ -98,7 +89,7 @@ export const StyleCard = styled.div`
     width: 100%;
     max-width: 28rem;
     animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 4s;
+  animation-duration: 2s;
     &:hover {
         .image img {
             transform: scale(1.05);
@@ -123,7 +114,7 @@ export const StyleCard = styled.div`
             height: 100%;
             transition: all 0.3s ease;
             object-fit: fill;
-            cursor: pointer;
+            
         }
     }
 
@@ -210,6 +201,11 @@ export const BtnLoadMore = styled.button`
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
+`
+export const Rarity = styled.h3`
+ font-weight: 700;
+  color: ${props => props.rarity === 'raro' ? "gold" :  "red" }!important;
+  
 `
 
 
