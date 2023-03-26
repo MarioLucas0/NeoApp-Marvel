@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Container } from '../../styles/global';
+import styled from "styled-components";
+import { Container } from "../../styles/global";
 
 export const StyleFooter = styled.footer`
   padding: 4rem 0;

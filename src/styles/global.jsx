@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle  = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -37,5 +37,4 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1216px;
   margin: 0 auto;
-
 `;

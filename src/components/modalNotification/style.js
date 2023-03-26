@@ -1,5 +1,5 @@
-import 'animate.css';
-import styled from 'styled-components';
+import "animate.css";
+import styled from "styled-components";
 
 export const ModalWrapper = styled.div`
   position: fixed;
@@ -18,25 +18,21 @@ export const ModalWrapper = styled.div`
   animation-duration: 1s;
 `;
 
-
-
 export const ModalContent = styled.div`
- width: 100%;
- height: 100%;
+  width: 100%;
+  height: 100%;
   padding-top: 3rem;
   border-radius: 5px;
   position: relative;
   text-align: center;
-  
-
 
   display: flex;
   justify-content: space-between;
 `;
 export const Text = styled.p`
-    font-weight: 700;
-    font-size: 2rem;
-    border: none !important;
+  font-weight: 700;
+  font-size: 2rem;
+  border: none !important;
 `;
 
 export const ModalLoading = styled.div`

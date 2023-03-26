@@ -1,5 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { LoadingBar, ModalContent, ModalLoading, ModalWrapper, Text } from "./style";
+import React, { useEffect, useState } from "react";
+import {
+  LoadingBar,
+  ModalContent,
+  ModalLoading,
+  ModalWrapper,
+  Text,
+} from "./style";
 
 export const ModalTotast = ({ message, showModal, setShowModal }) => {
   const [visible, setVisible] = useState(false);
@@ -10,12 +16,12 @@ export const ModalTotast = ({ message, showModal, setShowModal }) => {
       setTimeout(() => {
         setVisible(false);
         setShowModal(false);
-      }, 3000); 
+      }, 3000);
     }
   }, [showModal, setShowModal]);
 
   return (
-    <ModalWrapper style={{ display: visible ? 'flex' : 'none' }}>
+    <ModalWrapper style={{ display: visible ? "flex" : "none" }}>
       <ModalContent>
         <ModalLoading>
           <Text>{message}</Text>
@@ -25,8 +31,3 @@ export const ModalTotast = ({ message, showModal, setShowModal }) => {
     </ModalWrapper>
   );
 };
-
-
-
-
-
