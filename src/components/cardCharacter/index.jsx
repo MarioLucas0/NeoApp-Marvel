@@ -7,13 +7,13 @@ import { context } from "../../context/carrinho";
 import { Container } from "../../styles/global";
 import { ModalTotast } from "../modalNotification";
 import {
-    BtnLoadMore,
-    ButtonLimpar,
-    DivInput,
-    DivInputs, Info, Rarity,
-    StyleCard,
-    StyleListCharacter,
-    StyleListCharacters
+  BtnLoadMore,
+  ButtonLimpar,
+  DivInput,
+  DivInputs, Info, Rarity,
+  StyleCard,
+  StyleListCharacter,
+  StyleListCharacters
 } from "./styles";
 
 export function ListCharacters({ data }) {
@@ -87,8 +87,6 @@ export function ListCharacters({ data }) {
                 <div
                   className="image"
                   onClick={() => {
-                    setComic(character);
-                    console.log(character);
                   }}
                 >
                   <img
